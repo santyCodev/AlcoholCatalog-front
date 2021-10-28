@@ -1,11 +1,21 @@
+@import '../../assets/styles/mixins.scss';
+
 .cards-list {
     z-index: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    @include tablet {
+      padding: 100px 100px;
+    }    
+
+    @include desktop {
+      padding: 100px 100px;
+    }    
   }  
   
+
   @media all and (max-width: 500px) {
     .card-list {
       /* On small screens, we are no longer using row direction but column */

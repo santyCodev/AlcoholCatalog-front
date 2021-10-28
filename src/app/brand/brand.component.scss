@@ -1,23 +1,32 @@
+@import '../../assets/styles/mixins.scss';
 .card {
-    margin: 30px auto;
-    width: 300px;
-    height: 300px;
-    border-radius: 40px;
+    margin: 30px auto;    
     box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
     cursor: pointer;
     transition: 0.4s;
+    width: 150px;
+    height: 200px;
+    border-radius: 20px;
+    @include tablet {
+        margin: 30px 15px;
+    }
+    @include desktop {
+        width: 300px;
+        height: 300px;
+        border-radius: 40px;
+    }    
 }
 
 .card .card_image {
     width: inherit;
     height: inherit;
-    border-radius: 40px;
+    border-radius: 20px;
   }
 
   .card .card_image img {
     width: inherit;
     height: inherit;
-    border-radius: 40px;
+    border-radius: 20px;
     object-fit: cover;
   }
 

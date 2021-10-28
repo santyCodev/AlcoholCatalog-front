@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Brand } from '../shared/models/brand.model';
+import { BrandService } from '../shared/services/brand.service';
 
 @Component({
   selector: 'app-brand-list',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrandListComponent implements OnInit {
 
-  constructor() { }
+  public brandList: Array<Brand> = [];
+
+  constructor(private brandService: BrandService) { }
 
   ngOnInit(): void {
+    this.getBrandList();
   }
 
+  private getBrandList(): void {
+    this.brandList = this.brandService.getAllBrands();
+    console.log(this.brandList);
+  }
 }

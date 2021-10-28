@@ -19,6 +19,5 @@ export class BrandListComponent implements OnInit {
 
   private getBrandList(): void {
     this.brandList = this.brandService.getAllBrands();
-    console.log(this.brandList);
   }
 }

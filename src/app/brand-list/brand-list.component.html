@@ -1,12 +1,7 @@
 <div class="cards-list">
     
     <div *ngFor="let brand of brandList">
-        <div class="card 1">
-            <div class="card_image"> <img src="{{brand.imageUrl}}"/> </div>
-            <div class="card_title title-white">
-              <p>{{brand.title}}</p>
-            </div>
-          </div>
+        <app-brand [brandChild]="brand"></app-brand>
     </div>
-    
+
 </div>
